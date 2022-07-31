@@ -1,0 +1,56 @@
+<h1>Calc DOM</h1>
+<h3>Calculadora Multa.</h3>
+<hr>
+
+<h4>Valor UTM: {{ utm.Valor | currency:"CLP $":0 }} ({{ utm.Fecha | date }}) (Fuente: {{ utm.api | uppercase }})</h4>
+<hr>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            0.75% de 1 UTM
+        </th>
+        <th></th>
+        <th>
+            Métros cúbicos
+        </th>
+        <th></th>
+        <th>
+            SubTotal Item 1
+        </th>
+    </tr>
+    <tr>
+        <td>{{ umc | currency:'CLP $':0 }}</td>
+        <td>x</td>
+        <td><input type="number" ng-model="mc"> metro(s) cúbico(s)</td>
+        <td>=</td>
+        <td>{{ tumc = umc * mc | currency:'CLP $':0 }}</td>
+    </tr>
+    <tr>
+        <th>
+            20% de 1 UTM
+        </th>
+        <th></th>
+        <th>
+            Días de atraso
+        </th>
+        <th></th>
+        <th>
+            SubTotal Item 2
+        </th>
+    </tr>
+    <tr>
+        <td>{{ udt | currency:"CLP $":0 }}</td>
+        <td>x</td>
+        <td><input type="number" ng-model="dt"> día(s)</td>
+        <td>=</td>
+        <td>{{ tudt = udt * dt | currency:'CLP $':0 }}</td>
+    </tr>
+    <tr>
+        <th colspan="4">TOTAL (Item 1 + Item 2)</th>
+        <th>{{ tumc + tudt | currency:'CLP $':0 }}</th>
+    </tr>
+</table>
+
+
+<hr>

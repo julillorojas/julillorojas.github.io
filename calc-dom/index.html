@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="CalcDomApp" ng-controller="mainCtrl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <title>Calc DOM</title>
+
+
+        <!-- Incluir Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Animate.css -->
+        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Estilo personalizado -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Incluir AngularJS -->
+        <script src="js/lib/angular.min.js" type="text/javascript"></script>
+        <script src="js/lib/angular-route.min.js" type="text/javascript"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/config.js"></script>
+
+        <!-- Controladores -->
+        <script src="js/inicioCtrl.js" type="text/javascript"></script>
+        <script src="js/licenciaCtrl.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+        <div ng-include="menuSuperior"></div>
+
+
+        <div class="container">
+            <!-- La pagina principal ira aquí -->
+            <div ng-view></div>
+
+        </div><!-- /.container -->
+        
+    </body>
+</html>
